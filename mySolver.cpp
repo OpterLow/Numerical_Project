@@ -1,20 +1,13 @@
 #include <iostream>
-#include <cstdlib>
-#include <vector>
+#include "config.h"
+#include "algorithms.h"
 
 using namespace std;
 
-// Find roots of a function, choosing an appropriate numerical method.
-// inputs: equation type (polynomial, sin, cos, tan, exponential, ln),
-//         solver (bisection, newton, false position)
-//          constant(s), and interval [a, b]
-
 int main(int argc, char** argv) {
-    string equationType;
-    string solver;
-    vector<double> constants;
-    double a, b;
+    AppConfig config;
 
+<<<<<<< HEAD
     if (argc > 1) {
         equationType = argv[1];
         solver = argv[2];
@@ -73,3 +66,26 @@ int main(int argc, char** argv) {
         return 1;
     }
 }
+=======
+    if (!parseArguments(argc, argv, config)) {
+        cerr << "Usage: " << argv[0] << " <a> <b> <functionType> [constants...]\n";
+        return 1;
+    }
+
+    // 2. Route to the requested algorithm
+    if (config.functionType == "bisection") {
+        double root = runBisection(config);
+        cout << "Bisection Root: " << root << endl;
+    } 
+    else if (config.functionType == "newton") {
+        double root = runNewton(config);
+        cout << "Newton Root: " << root << endl;
+    } 
+    else {
+        cerr << "Unknown function type: " << config.functionType << "\n";
+        return 1;
+    }
+
+    return 0;
+}
+>>>>>>> feature/kennym
