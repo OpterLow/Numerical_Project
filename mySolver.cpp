@@ -26,28 +26,42 @@ int main(int argc, char** argv) {
         b = atof(argv[argc - 1]);
         
         // run each solver based on the input, with the provided constants and interval [a, b]
-        // construct arguments string for the solver: "a b <constants vector>"
+<<<<<<< HEAD
+        // construct arguments string for the solver: "a b <equationType> <constants vector>"
         string arguments;
-        arguments = to_string(a) + " " + to_string(b);
-            for (double c : constants) {
-                arguments += " " + to_string(c);
-            }
-        // vanity print of the constructed arguments string
-        string vanityArugments = "a = " + to_string(a) + ", b = " + to_string(b) + ", constants =";
+        arguments = to_string(a) + " " + to_string(b) + " " + equationType;
         for (double c : constants) {
-            vanityArugments += " " + to_string(c);
+            arguments += " " + to_string(c);
+=======
+        // construct arguments string for the solver: "a b <equationType> <constants vector>"
+        string arguments;
+        arguments = to_string(a) + " " + to_string(b) + " " + equationType;
+        for (double c : constants) {
+            arguments += " " + to_string(c);
+>>>>>>> origin/main
         }
+
+        // vanity print of the constructed arguments string
+        string vanityArguments = "a = " + to_string(a) + ", b = " + to_string(b) + ", equationType = " + equationType + ", constants =";
+        for (double c : constants) {
+            vanityArguments += " " + to_string(c);
+        }
+        
         if (solver == "bisection") {
             // Call bisection method
             // system(("./bisection " + arguments).c_str());
-            cout << "Running bisection with arguments: " << vanityArugments << endl;
+<<<<<<< HEAD
+            cout << "Running bisection with arguments: " << vanityArguments << endl;
+=======
+            cout << "Running bisection with arguments: " << vanityArguments << endl;
+>>>>>>> origin/main
 
         } else if (solver == "newton") {
             // Call Newton's method
-            cout << "Running newton with arguments: " << vanityArugments << endl;
+            cout << "Running newton with arguments: " << vanityArguments << endl;
         } else if (solver == "false position") {
             // Call false position method
-            cout << "Running false position with arguments: " << vanityArugments << endl;
+            cout << "Running false position with arguments: " << vanityArguments << endl;
         } else {
             cerr << "Unknown solver: " << solver << endl;
         }
