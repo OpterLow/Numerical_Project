@@ -34,22 +34,22 @@ int main(int argc, char** argv) {
         }
 
         // vanity print of the constructed arguments string
-        string vanityArugments = "a = " + to_string(a) + ", b = " + to_string(b) + ", equationType = " + equationType + ", constants =";
+        string vanityArguments = "a = " + to_string(a) + ", b = " + to_string(b) + ", equationType = " + equationType + ", constants =";
         for (double c : constants) {
-            vanityArugments += " " + to_string(c);
+            vanityArguments += " " + to_string(c);
         }
         
         if (solver == "bisection") {
             // Call bisection method
             // system(("./bisection " + arguments).c_str());
-            cout << "Running bisection with arguments: " << vanityArugments << endl;
+            cout << "Running bisection with arguments: " << vanityArguments << endl;
 
         } else if (solver == "newton") {
             // Call Newton's method
-            cout << "Running newton with arguments: " << vanityArugments << endl;
+            cout << "Running newton with arguments: " << vanityArguments << endl;
         } else if (solver == "false position") {
             // Call false position method
-            cout << "Running false position with arguments: " << vanityArugments << endl;
+            cout << "Running false position with arguments: " << vanityArguments << endl;
         } else {
             cerr << "Unknown solver: " << solver << endl;
         }
