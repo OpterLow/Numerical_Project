@@ -1,2 +1,8 @@
-1. The Problem:
-	
+So we are going to take the program mySolver.cpp, and run it through this python script.
+
+Given the problem type, it will generate coefficients and bounds that fulfill these characteristics
+	1. Has 1 root
+	2. bounds are within bound bounds defined by the problem
+	3. Coefficients are within the coefficient bounds defined by the problem
+
+How to test it 	
