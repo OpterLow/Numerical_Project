@@ -7,10 +7,8 @@ using namespace std;
 bool parseArguments(int argc, char** argv, AppConfig& config) {
     if (argc < 6) return false;
     
-
     config.solver = argv[2];
     config.functionType = argv[1];
-
 
     for (int i = 3; i < argc - 2; ++i) {
         config.constants.push_back(stod(argv[i]));

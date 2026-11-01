@@ -1,33 +1,40 @@
-#include "../algorithms.h"
-#include "../config.h"
-#include <iostream>
+#include "algorithms.h"
 #include <cmath>
+#include <iostream>
 
 using namespace std;
 
-// Forward declaration to satisfy the compiler when the implementation is
-// available elsewhere in the project.
-double evaluateFunction(double x, const AppConfig& config, bool derivative);
+// Newton's method for finding roots of a function
+// derivMode: DERIV_ANALYTIC uses the exact derivative, DERIV_NUMERIC a finite difference
+double runNewton(const AppConfig& config, char derivMode) {
+    const int maxIter = 100;
+    double x = (config.a + config.b) / 2.0;
 
-double runNewton(const AppConfig& config) {
-    double x = (config.a + config.b) / 2.0; // Initial guess: midpoint
-    int max_iter = 1000;
-
-    for (int i = 0; i < max_iter; ++i) {
-        double f_val = evaluateFunction(x, config, false);
-
-        if (fabs(f_val) < config.tol) {
+    for (int i = 0; i < maxIter; ++i) {
+        EvalResult r = evaluateFunction(x, config, derivMode);
+        if (fabs(r.value) < config.tol) {
             return x;
         }
 
-        double f_prime = evaluateFunction(x, config, true);
-        if (fabs(f_prime) < 1e-12) {
-            cerr << "Error: Derivative near zero in Newton's method.\n";
+        double deriv;
+        if (derivMode == DERIV_ANALYTIC && r.derivative) {
+            deriv = *r.derivative;
+        } else {
+            deriv = numericalDerivative(x, config);
+        }
+
+        if (deriv == 0.0 || !isfinite(deriv)) {
+            cerr << "Newton: derivative is zero or invalid at x = " << x << "\n";
             return x;
         }
 
-        x = x - f_val / f_prime;
+        double xNew = x - r.value / deriv;
+        if (fabs(xNew - x) < config.tol) {
+            return xNew;
+        }
+        x = xNew;
     }
 
+    cerr << "Newton: reached the maximum number of iterations\n";
     return x;
 }
