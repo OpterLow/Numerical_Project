@@ -5,7 +5,7 @@
 
 using namespace std;
 
-pair<double, double> runHorner(double x, const AppConfig& config, bool computeDerivative) {
+EvalResult runHorner(double x, const AppConfig& config, bool computeDerivative) {
     const vector<double>& coefficients = config.constants;
     if (coefficients.empty()) {
         throw invalid_argument("Polynomial must have at least one coefficient");
@@ -31,5 +31,8 @@ pair<double, double> runHorner(double x, const AppConfig& config, bool computeDe
         }
     }
 
-    return {value, derivative};
+    if (computeDerivative) {
+        return {value, derivative};
+    }
+    return {value, nullopt};
 }

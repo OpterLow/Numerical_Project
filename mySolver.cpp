@@ -19,18 +19,17 @@ int main(int argc, char** argv) {
         return 1;
     }
 
-<<<<<<< HEAD
-    // Route to the requested algorithm
-    if (config.functionType == "bisection") {
-=======
     // 2. Route to the requested algorithm
     if (config.solver == "bisection") {
->>>>>>> feature/kennym
         double root = runBisection(config);
         cout << "Bisection Root: " << root << endl;
     } 
-    else if (config.solver == "newton") {
-        double root = runNewton(config);
+    else if (config.solver == "newton" || config.solver == "newton1") {
+        double root = runNewton(config, DERIV_ANALYTIC);
+        cout << "Newton Root: " << root << endl;
+    } 
+    else if (config.solver == "newton2") {
+        double root = runNewton(config, DERIV_NUMERIC);
         cout << "Newton Root: " << root << endl;
     } 
     else if (config.solver == "false_position") {

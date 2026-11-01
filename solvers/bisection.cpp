@@ -15,14 +15,16 @@ double runBisection(const AppConfig& config) {
     double root = 0.0;
 
     int max_iter = ceil((log(b - a) - log(config.tol)) / log(2));
-    
+
     for (int i = 0; i < max_iter; ++i) {
         root = (a + b) / 2.0;
-        double f_root = 0.0; // Replace with actual function evaluation using config
+        double f_root = evaluateFunction(root, config, DERIV_NONE).value;
+
         if (fabs(f_root) < config.tol) {
             break;
         }
-        double f_a = 0.0; // Replace with actual function evaluation using config
+        
+        double f_a = evaluateFunction(a, config, DERIV_NONE).value;
         if (f_a * f_root < 0) {
             b = root;
         } else {
