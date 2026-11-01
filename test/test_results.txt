@@ -1,0 +1,363 @@
+=== Suite 1: general cases (random inputs, residual must be < 1e-8) ===
+
+Problem: POLY  | Arguments: [1, 0.0, 1, 0.0, -1.93, 0.78]
+  PASS [BiSec           ] root   0.00000000 | f(root)  4.58e-15 | iterations 41
+  PASS [FalsePos        ] root   0.00000000 | f(root)  8.80e-13 | iterations 113
+  PASS [Newton1         ] root  -0.00000000 | f(root) -1.22e-16 | iterations 5
+  PASS [Newton2         ] root  -0.00000000 | f(root) -5.17e-16 | iterations 5
+  PASS [Bracket-Newton1 ] root  -0.00000000 | f(root) -1.22e-16 | iterations 5
+  PASS [Bracket-Newton2 ] root  -0.00000000 | f(root) -5.17e-16 | iterations 5
+
+Problem: POLY  | Arguments: [1, -0.82, 1, -0.82, -0.8, 2.45]
+  PASS [BiSec           ] root   0.82000000 | f(root) -3.73e-13 | iterations 41
+  PASS [FalsePos        ] root   0.82000000 | f(root) -9.52e-13 | iterations 106
+  PASS [Newton1         ] root   0.82000000 | f(root)  0.00e+00 | iterations 4
+  PASS [Newton2         ] root   0.82000000 | f(root)  0.00e+00 | iterations 4
+  PASS [Bracket-Newton1 ] root   0.82000000 | f(root)  0.00e+00 | iterations 4
+  PASS [Bracket-Newton2 ] root   0.82000000 | f(root)  0.00e+00 | iterations 4
+
+Problem: POLY  | Arguments: [1, 1.38, 1, 1.38, -3.23, 0.59]
+  PASS [BiSec           ] root  -1.38000000 | f(root)  7.84e-13 | iterations 40
+  PASS [FalsePos        ] root  -1.38000000 | f(root)  9.00e-13 | iterations 105
+  PASS [Newton1         ] root  -1.38000000 | f(root)  0.00e+00 | iterations 5
+  PASS [Newton2         ] root  -1.38000000 | f(root)  0.00e+00 | iterations 5
+  PASS [Bracket-Newton1 ] root  -1.38000000 | f(root)  0.00e+00 | iterations 5
+  PASS [Bracket-Newton2 ] root  -1.38000000 | f(root)  0.00e+00 | iterations 5
+
+Problem: POLY  | Arguments: [1, 0.46, 1, 0.46, -1.74, 1.48]
+  PASS [BiSec           ] root  -0.46000000 | f(root)  4.19e-13 | iterations 40
+  PASS [FalsePos        ] root  -0.46000000 | f(root)  7.31e-13 | iterations 75
+  PASS [Newton1         ] root  -0.46000000 | f(root) -1.38e-13 | iterations 5
+  PASS [Newton2         ] root  -0.46000000 | f(root) -1.38e-13 | iterations 5
+  PASS [Bracket-Newton1 ] root  -0.46000000 | f(root) -1.38e-13 | iterations 5
+  PASS [Bracket-Newton2 ] root  -0.46000000 | f(root) -1.38e-13 | iterations 5
+
+Problem: POLY  | Arguments: [1, 0.58, 1, 0.58, -2.28, 1.07]
+  PASS [BiSec           ] root  -0.58000000 | f(root) -1.82e-13 | iterations 40
+  PASS [FalsePos        ] root  -0.58000000 | f(root)  9.49e-13 | iterations 116
+  PASS [Newton1         ] root  -0.58000000 | f(root) -7.49e-14 | iterations 4
+  PASS [Newton2         ] root  -0.58000000 | f(root) -7.49e-14 | iterations 4
+  PASS [Bracket-Newton1 ] root  -0.58000000 | f(root) -7.49e-14 | iterations 4
+  PASS [Bracket-Newton2 ] root  -0.58000000 | f(root) -7.49e-14 | iterations 4
+
+Problem: COS   | Arguments: [0.05, 1.02, 2.02]
+  PASS [BiSec           ] root   1.52077547 | f(root)  3.65e-14 | iterations 39
+  PASS [FalsePos        ] root   1.52077547 | f(root)  1.46e-13 | iterations 4
+  PASS [Newton1         ] root   1.52077547 | f(root) -3.44e-15 | iterations 3
+  PASS [Newton2         ] root   1.52077547 | f(root) -3.44e-15 | iterations 3
+  PASS [Bracket-Newton1 ] root   1.52077547 | f(root) -3.44e-15 | iterations 3
+  PASS [Bracket-Newton2 ] root   1.52077547 | f(root) -3.44e-15 | iterations 3
+
+Problem: COS   | Arguments: [0.28, 0.79, 1.79]
+  PASS [BiSec           ] root   1.28700222 | f(root) -9.71e-13 | iterations 38
+  PASS [FalsePos        ] root   1.28700222 | f(root)  7.28e-13 | iterations 8
+  PASS [Newton1         ] root   1.28700222 | f(root) -2.41e-13 | iterations 3
+  PASS [Newton2         ] root   1.28700222 | f(root) -2.41e-13 | iterations 3
+  PASS [Bracket-Newton1 ] root   1.28700222 | f(root) -2.41e-13 | iterations 3
+  PASS [Bracket-Newton2 ] root   1.28700222 | f(root) -2.41e-13 | iterations 3
+
+Problem: COS   | Arguments: [-0.3, 1.38, 2.38]
+  PASS [BiSec           ] root   1.87548898 | f(root) -1.77e-13 | iterations 38
+  PASS [FalsePos        ] root   1.87548898 | f(root) -9.15e-14 | iterations 9
+  PASS [Newton1         ] root   1.87548898 | f(root)  4.00e-15 | iterations 4
+  PASS [Newton2         ] root   1.87548898 | f(root)  4.00e-15 | iterations 4
+  PASS [Bracket-Newton1 ] root   1.87548898 | f(root)  4.00e-15 | iterations 4
+  PASS [Bracket-Newton2 ] root   1.87548898 | f(root)  4.00e-15 | iterations 4
+
+Problem: COS   | Arguments: [-0.71, 1.86, 2.86]
+  PASS [BiSec           ] root   2.36029454 | f(root) -5.72e-14 | iterations 37
+  PASS [FalsePos        ] root   2.36029454 | f(root) -3.11e-13 | iterations 16
+  PASS [Newton1         ] root   2.36029454 | f(root) -8.88e-16 | iterations 3
+  PASS [Newton2         ] root   2.36029454 | f(root) -8.88e-16 | iterations 3
+  PASS [Bracket-Newton1 ] root   2.36029454 | f(root) -8.88e-16 | iterations 3
+  PASS [Bracket-Newton2 ] root   2.36029454 | f(root) -8.88e-16 | iterations 3
+
+Problem: COS   | Arguments: [-0.27, 1.34, 2.34]
+  PASS [BiSec           ] root   1.84418936 | f(root)  3.47e-13 | iterations 39
+  PASS [FalsePos        ] root   1.84418936 | f(root) -3.66e-13 | iterations 8
+  PASS [Newton1         ] root   1.84418936 | f(root)  7.99e-13 | iterations 3
+  PASS [Newton2         ] root   1.84418936 | f(root)  7.99e-13 | iterations 3
+  PASS [Bracket-Newton1 ] root   1.84418936 | f(root)  7.99e-13 | iterations 3
+  PASS [Bracket-Newton2 ] root   1.84418936 | f(root)  7.99e-13 | iterations 3
+
+Problem: SIN   | Arguments: [0.13, -0.37, 0.63]
+  PASS [BiSec           ] root   0.13036898 | f(root) -1.93e-14 | iterations 39
+  PASS [FalsePos        ] root   0.13036898 | f(root)  5.00e-16 | iterations 5
+  PASS [Newton1         ] root   0.13036898 | f(root)  5.00e-16 | iterations 3
+  PASS [Newton2         ] root   0.13036898 | f(root)  5.00e-16 | iterations 3
+  PASS [Bracket-Newton1 ] root   0.13036898 | f(root)  5.00e-16 | iterations 3
+  PASS [Bracket-Newton2 ] root   0.13036898 | f(root)  5.00e-16 | iterations 3
+
+Problem: SIN   | Arguments: [0.24, -0.26, 0.74]
+  PASS [BiSec           ] root   0.24236585 | f(root)  9.48e-13 | iterations 37
+  PASS [FalsePos        ] root   0.24236585 | f(root)  2.99e-14 | iterations 8
+  PASS [Newton1         ] root   0.24236585 | f(root) -5.65e-14 | iterations 3
+  PASS [Newton2         ] root   0.24236585 | f(root) -5.65e-14 | iterations 3
+  PASS [Bracket-Newton1 ] root   0.24236585 | f(root) -5.65e-14 | iterations 3
+  PASS [Bracket-Newton2 ] root   0.24236585 | f(root) -5.65e-14 | iterations 3
+
+Problem: SIN   | Arguments: [0.89, 0.6, 1.57]
+  PASS [BiSec           ] root   1.09734517 | f(root)  2.10e-13 | iterations 38
+  PASS [FalsePos        ] root   1.09734517 | f(root)  5.56e-13 | iterations 23
+  PASS [Newton1         ] root   1.09734517 | f(root) -2.22e-16 | iterations 4
+  PASS [Newton2         ] root   1.09734517 | f(root) -2.22e-16 | iterations 4
+  PASS [Bracket-Newton1 ] root   1.09734517 | f(root) -2.22e-16 | iterations 4
+  PASS [Bracket-Newton2 ] root   1.09734517 | f(root) -2.22e-16 | iterations 4
+
+Problem: SIN   | Arguments: [-0.69, -1.26, -0.26]
+  PASS [BiSec           ] root  -0.76148905 | f(root)  2.60e-13 | iterations 39
+  PASS [FalsePos        ] root  -0.76148905 | f(root) -8.16e-13 | iterations 15
+  PASS [Newton1         ] root  -0.76148905 | f(root)  3.84e-13 | iterations 3
+  PASS [Newton2         ] root  -0.76148905 | f(root)  3.84e-13 | iterations 3
+  PASS [Bracket-Newton1 ] root  -0.76148905 | f(root)  3.84e-13 | iterations 3
+  PASS [Bracket-Newton2 ] root  -0.76148905 | f(root)  3.84e-13 | iterations 3
+
+Problem: SIN   | Arguments: [-0.4, -0.91, 0.09]
+  PASS [BiSec           ] root  -0.41151685 | f(root)  6.25e-13 | iterations 34
+  PASS [FalsePos        ] root  -0.41151685 | f(root) -7.18e-13 | iterations 10
+  PASS [Newton1         ] root  -0.41151685 | f(root)  5.05e-14 | iterations 3
+  PASS [Newton2         ] root  -0.41151685 | f(root)  5.05e-14 | iterations 3
+  PASS [Bracket-Newton1 ] root  -0.41151685 | f(root)  5.05e-14 | iterations 3
+  PASS [Bracket-Newton2 ] root  -0.41151685 | f(root)  5.05e-14 | iterations 3
+
+Problem: TAN   | Arguments: [-2.41, -1.41, -0.68]
+  PASS [BiSec           ] root  -1.17747926 | f(root) -2.66e-12 | iterations 40
+  PASS [FalsePos        ] root  -1.17747926 | f(root)  8.09e-13 | iterations 53
+  PASS [Newton1         ] root  -1.17747926 | f(root) -7.11e-15 | iterations 6
+  PASS [Newton2         ] root  -1.17747926 | f(root) -7.11e-15 | iterations 6
+  PASS [Bracket-Newton1 ] root  -1.17747926 | f(root) -7.11e-15 | iterations 6
+  PASS [Bracket-Newton2 ] root  -1.17747926 | f(root) -7.11e-15 | iterations 6
+
+Problem: TAN   | Arguments: [-3.7, -1.41, -0.81]
+  PASS [BiSec           ] root  -1.30683260 | f(root) -7.06e-13 | iterations 39
+  PASS [FalsePos        ] root  -1.30683260 | f(root)  3.25e-13 | iterations 32
+  PASS [Newton1         ] root  -1.30683260 | f(root)  3.15e-14 | iterations 8
+  PASS [Newton2         ] root  -1.30683260 | f(root)  3.15e-14 | iterations 8
+  PASS [Bracket-Newton1 ] root  -1.30683260 | f(root)  3.15e-14 | iterations 6
+  PASS [Bracket-Newton2 ] root  -1.30683260 | f(root)  3.15e-14 | iterations 6
+
+Problem: TAN   | Arguments: [-3.94, -1.41, -0.82]
+  PASS [BiSec           ] root  -1.32223773 | f(root) -5.39e-13 | iterations 40
+  PASS [FalsePos        ] root  -1.32223773 | f(root)  4.51e-13 | iterations 29
+  PASS [Newton1         ] root  -1.32223773 | f(root) -4.40e-14 | iterations 8
+  PASS [Newton2         ] root  -1.32223773 | f(root) -4.40e-14 | iterations 8
+  PASS [Bracket-Newton1 ] root  -1.32223773 | f(root) -4.40e-14 | iterations 7
+  PASS [Bracket-Newton2 ] root  -1.32223773 | f(root) -4.40e-14 | iterations 7
+
+Problem: TAN   | Arguments: [3.65, 0.8, 1.41]
+  PASS [BiSec           ] root   1.30338553 | f(root) -3.31e-13 | iterations 38
+  PASS [FalsePos        ] root   1.30338553 | f(root) -7.60e-13 | iterations 32
+  PASS [Newton1         ] root   1.30338553 | f(root) -4.49e-14 | iterations 8
+  PASS [Newton2         ] root   1.30338553 | f(root) -4.49e-14 | iterations 8
+  PASS [Bracket-Newton1 ] root   1.30338553 | f(root) -4.49e-14 | iterations 6
+  PASS [Bracket-Newton2 ] root   1.30338553 | f(root) -4.49e-14 | iterations 6
+
+Problem: TAN   | Arguments: [-2.61, -1.41, -0.7]
+  PASS [BiSec           ] root  -1.20490685 | f(root) -3.91e-12 | iterations 40
+  PASS [FalsePos        ] root  -1.20490685 | f(root)  6.27e-13 | iterations 49
+  PASS [Newton1         ] root  -1.20490685 | f(root) -1.55e-13 | iterations 6
+  PASS [Newton2         ] root  -1.20490685 | f(root) -1.55e-13 | iterations 6
+  PASS [Bracket-Newton1 ] root  -1.20490685 | f(root) -1.55e-13 | iterations 6
+  PASS [Bracket-Newton2 ] root  -1.20490685 | f(root) -1.55e-13 | iterations 6
+
+Problem: EXP   | Arguments: [4.15, 0.92, 1.92]
+  PASS [BiSec           ] root   1.42310833 | f(root)  8.84e-13 | iterations 40
+  PASS [FalsePos        ] root   1.42310833 | f(root) -3.20e-13 | iterations 20
+  PASS [Newton1         ] root   1.42310833 | f(root)  1.24e-14 | iterations 4
+  PASS [Newton2         ] root   1.42310833 | f(root)  1.24e-14 | iterations 4
+  PASS [Bracket-Newton1 ] root   1.42310833 | f(root)  1.24e-14 | iterations 4
+  PASS [Bracket-Newton2 ] root   1.42310833 | f(root)  1.24e-14 | iterations 4
+
+Problem: EXP   | Arguments: [0.89, -0.62, 0.38]
+  PASS [BiSec           ] root  -0.11653382 | f(root) -4.78e-13 | iterations 39
+  PASS [FalsePos        ] root  -0.11653382 | f(root) -3.05e-13 | iterations 19
+  PASS [Newton1         ] root  -0.11653382 | f(root)  4.44e-16 | iterations 4
+  PASS [Newton2         ] root  -0.11653382 | f(root)  4.44e-16 | iterations 4
+  PASS [Bracket-Newton1 ] root  -0.11653382 | f(root)  4.44e-16 | iterations 4
+  PASS [Bracket-Newton2 ] root  -0.11653382 | f(root)  4.44e-16 | iterations 4
+
+Problem: EXP   | Arguments: [3.41, 0.73, 1.73]
+  PASS [BiSec           ] root   1.22671229 | f(root)  1.31e-12 | iterations 40
+  PASS [FalsePos        ] root   1.22671229 | f(root) -3.25e-13 | iterations 20
+  PASS [Newton1         ] root   1.22671229 | f(root)  1.55e-14 | iterations 4
+  PASS [Newton2         ] root   1.22671229 | f(root)  1.55e-14 | iterations 4
+  PASS [Bracket-Newton1 ] root   1.22671229 | f(root)  1.55e-14 | iterations 4
+  PASS [Bracket-Newton2 ] root   1.22671229 | f(root)  1.55e-14 | iterations 4
+
+Problem: EXP   | Arguments: [2.17, 0.27, 1.27]
+  PASS [BiSec           ] root   0.77472717 | f(root) -5.40e-13 | iterations 39
+  PASS [FalsePos        ] root   0.77472717 | f(root) -7.12e-13 | iterations 19
+  PASS [Newton1         ] root   0.77472717 | f(root) -4.44e-16 | iterations 4
+  PASS [Newton2         ] root   0.77472717 | f(root) -4.44e-16 | iterations 4
+  PASS [Bracket-Newton1 ] root   0.77472717 | f(root) -4.44e-16 | iterations 4
+  PASS [Bracket-Newton2 ] root   0.77472717 | f(root) -4.44e-16 | iterations 4
+
+Problem: EXP   | Arguments: [4.36, 0.97, 1.97]
+  PASS [BiSec           ] root   1.47247206 | f(root)  4.66e-13 | iterations 40
+  PASS [FalsePos        ] root   1.47247206 | f(root) -3.61e-13 | iterations 20
+  PASS [Newton1         ] root   1.47247206 | f(root) -1.33e-14 | iterations 4
+  PASS [Newton2         ] root   1.47247206 | f(root) -1.33e-14 | iterations 4
+  PASS [Bracket-Newton1 ] root   1.47247206 | f(root) -1.33e-14 | iterations 4
+  PASS [Bracket-Newton2 ] root   1.47247206 | f(root) -1.33e-14 | iterations 4
+
+Problem: LOG   | Arguments: [-0.55, 0.2884749051902433, 1.1538996207609733]
+  PASS [BiSec           ] root   0.57694981 | f(root)  9.09e-13 | iterations 39
+  PASS [FalsePos        ] root   0.57694981 | f(root)  5.29e-13 | iterations 22
+  PASS [Newton1         ] root   0.57694981 | f(root) -4.66e-15 | iterations 5
+  PASS [Newton2         ] root   0.57694981 | f(root) -4.66e-15 | iterations 5
+  PASS [Bracket-Newton1 ] root   0.57694981 | f(root) -4.66e-15 | iterations 5
+  PASS [Bracket-Newton2 ] root   0.57694981 | f(root) -4.66e-15 | iterations 5
+
+Problem: LOG   | Arguments: [1.16, 1.5949666380580922, 6.379866552232369]
+  PASS [BiSec           ] root   3.18993328 | f(root)  9.11e-13 | iterations 39
+  PASS [FalsePos        ] root   3.18993328 | f(root)  5.28e-13 | iterations 22
+  PASS [Newton1         ] root   3.18993328 | f(root) -4.66e-15 | iterations 5
+  PASS [Newton2         ] root   3.18993328 | f(root) -4.66e-15 | iterations 5
+  PASS [Bracket-Newton1 ] root   3.18993328 | f(root) -4.66e-15 | iterations 5
+  PASS [Bracket-Newton2 ] root   3.18993328 | f(root) -4.66e-15 | iterations 5
+
+Problem: LOG   | Arguments: [-0.13, 0.43904771546028065, 1.7561908618411226]
+  PASS [BiSec           ] root   0.87809543 | f(root)  9.10e-13 | iterations 39
+  PASS [FalsePos        ] root   0.87809543 | f(root)  5.29e-13 | iterations 22
+  PASS [Newton1         ] root   0.87809543 | f(root) -3.80e-15 | iterations 5
+  PASS [Newton2         ] root   0.87809543 | f(root) -3.80e-15 | iterations 5
+  PASS [Bracket-Newton1 ] root   0.87809543 | f(root) -3.80e-15 | iterations 5
+  PASS [Bracket-Newton2 ] root   0.87809543 | f(root) -3.80e-15 | iterations 5
+
+Problem: LOG   | Arguments: [-2.43, 0.044018416291186274, 0.1760736651647451]
+  PASS [BiSec           ] root   0.08803683 | f(root)  3.64e-12 | iterations 37
+  PASS [FalsePos        ] root   0.08803683 | f(root)  5.29e-13 | iterations 22
+  PASS [Newton1         ] root   0.08803683 | f(root) -4.00e-15 | iterations 5
+  PASS [Newton2         ] root   0.08803683 | f(root) -4.00e-15 | iterations 5
+  PASS [Bracket-Newton1 ] root   0.08803683 | f(root) -4.00e-15 | iterations 5
+  PASS [Bracket-Newton2 ] root   0.08803683 | f(root) -4.00e-15 | iterations 5
+
+Problem: LOG   | Arguments: [4.19, 33.011395480204975, 132.0455819208199]
+  PASS [BiSec           ] root  66.02279096 | f(root)  9.09e-13 | iterations 39
+  PASS [FalsePos        ] root  66.02279096 | f(root)  5.29e-13 | iterations 22
+  PASS [Newton1         ] root  66.02279096 | f(root) -3.55e-15 | iterations 5
+  PASS [Newton2         ] root  66.02279096 | f(root) -3.55e-15 | iterations 5
+  PASS [Bracket-Newton1 ] root  66.02279096 | f(root) -3.55e-15 | iterations 5
+  PASS [Bracket-Newton2 ] root  66.02279096 | f(root) -3.55e-15 | iterations 5
+
+=== Suite 2: corner cases that should succeed (root within 1e-6) ===
+
+root at left endpoint: POLY [1, -2, 2, 5]
+  PASS [BiSec           ] root 2.0000000000 (expected 2.0000000000)
+  PASS [FalsePos        ] root 2.0000000000 (expected 2.0000000000)
+  PASS [Newton1         ] root 2.0000000000 (expected 2.0000000000)
+  PASS [Newton2         ] root 2.0000000000 (expected 2.0000000000)
+  PASS [Bracket-Newton1 ] root 2.0000000000 (expected 2.0000000000)
+  PASS [Bracket-Newton2 ] root 2.0000000000 (expected 2.0000000000)
+
+root at right endpoint: POLY [1, -2, -1, 2]
+  PASS [BiSec           ] root 2.0000000000 (expected 2.0000000000)
+  PASS [FalsePos        ] root 2.0000000000 (expected 2.0000000000)
+  PASS [Newton1         ] root 2.0000000000 (expected 2.0000000000)
+  PASS [Newton2         ] root 2.0000000000 (expected 2.0000000000)
+  PASS [Bracket-Newton1 ] root 2.0000000000 (expected 2.0000000000)
+  PASS [Bracket-Newton2 ] root 2.0000000000 (expected 2.0000000000)
+
+tiny interval: POLY [1, -2, 1.999999, 2.000001]
+  PASS [BiSec           ] root 2.0000000000 (expected 2.0000000000)
+  PASS [FalsePos        ] root 2.0000000000 (expected 2.0000000000)
+  PASS [Newton1         ] root 2.0000000000 (expected 2.0000000000)
+  PASS [Newton2         ] root 2.0000000000 (expected 2.0000000000)
+  PASS [Bracket-Newton1 ] root 2.0000000000 (expected 2.0000000000)
+  PASS [Bracket-Newton2 ] root 2.0000000000 (expected 2.0000000000)
+
+degree-5 polynomial: POLY [1, -1, 5, -5, 4, -4, 0, 3]
+  PASS [BiSec           ] root 1.0000000000 (expected 1.0000000000)
+  PASS [FalsePos        ] root 1.0000000000 (expected 1.0000000000)
+  PASS [Newton1         ] root 1.0000000000 (expected 1.0000000000)
+  PASS [Newton2         ] root 1.0000000000 (expected 1.0000000000)
+  PASS [Bracket-Newton1 ] root 1.0000000000 (expected 1.0000000000)
+  PASS [Bracket-Newton2 ] root 1.0000000000 (expected 1.0000000000)
+
+zero derivative at the start point: POLY [1, 0, 0, -1, -2, 2]
+  PASS [BiSec           ] root 1.0000000000 (expected 1.0000000000)
+  PASS [FalsePos        ] root 1.0000000000 (expected 1.0000000000)
+  PASS [Newton1         ] reported failure as expected
+  PASS [Newton2         ] root 1.0000000000 (expected 1.0000000000)
+  PASS [Bracket-Newton1 ] root 1.0000000000 (expected 1.0000000000)
+  PASS [Bracket-Newton2 ] root 1.0000000000 (expected 1.0000000000)
+
+COS root at the midpoint: COS [0, 0, 3.141592653589793]
+  PASS [BiSec           ] root 1.5707963268 (expected 1.5707963268)
+  PASS [FalsePos        ] root 1.5707963268 (expected 1.5707963268)
+  PASS [Newton1         ] root 1.5707963268 (expected 1.5707963268)
+  PASS [Newton2         ] root 1.5707963268 (expected 1.5707963268)
+  PASS [Bracket-Newton1 ] root 1.5707963268 (expected 1.5707963268)
+  PASS [Bracket-Newton2 ] root 1.5707963268 (expected 1.5707963268)
+
+SIN root at 0: SIN [0, -1, 1]
+  PASS [BiSec           ] root 0.0000000000 (expected 0.0000000000)
+  PASS [FalsePos        ] root 0.0000000000 (expected 0.0000000000)
+  PASS [Newton1         ] root 0.0000000000 (expected 0.0000000000)
+  PASS [Newton2         ] root 0.0000000000 (expected 0.0000000000)
+  PASS [Bracket-Newton1 ] root 0.0000000000 (expected 0.0000000000)
+  PASS [Bracket-Newton2 ] root 0.0000000000 (expected 0.0000000000)
+
+TAN near the asymptote (steep curve): TAN [1000, 1.5, 1.5707]
+  PASS [BiSec           ] root 1.5697963271 (expected 1.5697963271)
+  PASS [FalsePos        ] reported failure as expected
+  PASS [Newton1         ] reported failure as expected
+  PASS [Newton2         ] reported failure as expected
+  PASS [Bracket-Newton1 ] root 1.5697963271 (expected 1.5697963271)
+  PASS [Bracket-Newton2 ] root 1.5697963271 (expected 1.5697963271)
+
+EXP very wide interval (slow false position): EXP [5, -20, 20]
+  PASS [BiSec           ] root 1.6094379124 (expected 1.6094379124)
+  PASS [FalsePos        ] reported failure as expected
+  PASS [Newton1         ] root 1.6094379124 (expected 1.6094379124)
+  PASS [Newton2         ] root 1.6094379124 (expected 1.6094379124)
+  PASS [Bracket-Newton1 ] root 1.6094379124 (expected 1.6094379124)
+  PASS [Bracket-Newton2 ] root 1.6094379124 (expected 1.6094379124)
+
+LOG very small root (Newton leaves the domain): LOG [-10, 1e-06, 1]
+  PASS [BiSec           ] root 0.0000453999 (expected 0.0000453999)
+  PASS [FalsePos        ] root 0.0000453999 (expected 0.0000453999)
+  PASS [Newton1         ] reported failure as expected
+  PASS [Newton2         ] reported failure as expected
+  PASS [Bracket-Newton1 ] root 0.0000453999 (expected 0.0000453999)
+  PASS [Bracket-Newton2 ] root 0.0000453999 (expected 0.0000453999)
+
+=== Suite 3: malformed input (must exit with code 1 and an Error message) ===
+  PASS no arguments                           -> Error: expected at least 5 arguments
+  PASS no constants (POLY)                    -> Error: expected at least 5 arguments
+  PASS missing interval end                   -> Error: expected at least 5 arguments
+  PASS too many constants (COS)               -> Error: this problem takes exactly one constant c, then a and b
+  PASS non-numeric constant                   -> Error: argument 'x' is not a valid finite number
+  PASS non-numeric interval                   -> Error: argument 'a' is not a valid finite number
+  PASS nan constant                           -> Error: argument 'nan' is not a valid finite number
+  PASS unknown problem                        -> Error: unknown problem type 'foo' (use POLY, COS, SIN, TAN, EXP or LOG)
+  PASS unknown solver                         -> Error: unknown solver 'secant' (use BiSec, FalsePos, Newton1, Newton2, Bracket-Newton1 or Bracket-Newton2)
+  PASS a equals b                             -> Error: the interval must satisfy a < b
+  PASS a greater than b                       -> Error: the interval must satisfy a < b
+  PASS no sign change (POLY)                  -> Error: f(a) and f(b) must have opposite signs (f(a)*f(b) <= 0)
+  PASS zero leading coefficient               -> Error: the leading coefficient of the polynomial must be nonzero
+  PASS COS c above 1                          -> Error: c must be in [-1, 1]
+  PASS SIN c below -1                         -> Error: c must be in [-1, 1]
+  PASS COS interval outside [0, pi]           -> Error: COS interval must lie within [0, pi]
+  PASS SIN interval outside [-pi/2, pi/2]     -> Error: SIN interval must lie within [-pi/2, pi/2]
+  PASS TAN interval reaches pi/2              -> Error: TAN interval must lie strictly inside (-pi/2, pi/2)
+  PASS EXP with c = 0                         -> Error: c must be greater than 0 for EXP
+  PASS EXP with negative c                    -> Error: c must be greater than 0 for EXP
+  PASS LOG interval with a = 0                -> Error: LOG interval must have a > 0
+  PASS LOG interval with a < 0                -> Error: LOG interval must have a > 0
+  PASS no sign change (EXP)                   -> Error: f(a) and f(b) must have opposite signs (f(a)*f(b) <= 0)
+
+=== Solver comparison on general cases ===
+Solver                Passed   Avg iterations  Max iterations   Max |f(root)|
+BiSec                  30/30             38.9              41        3.91e-12
+FalsePos               30/30             34.1             116        9.52e-13
+Newton1                30/30              4.5               8        7.99e-13
+Newton2                30/30              4.5               8        7.99e-13
+Bracket-Newton1        30/30              4.4               7        7.99e-13
+Bracket-Newton2        30/30              4.4               7        7.99e-13
+
+=== Test summary ===
+general       180/180 passed
+corner-valid  60/60 passed
+invalid       23/23 passed
+TOTAL         263/263 passed

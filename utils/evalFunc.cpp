@@ -8,7 +8,7 @@ using std::nullopt;
 EvalResult evaluateFunction(double x, const AppConfig& config, char derivMode) {
     const bool computeDerivative = (derivMode == DERIV_ANALYTIC);
 
-    if (config.functionType == "polynomial") {
+    if (config.functionType == "poly") {
         return runHorner(x, config, computeDerivative);
     } 
 

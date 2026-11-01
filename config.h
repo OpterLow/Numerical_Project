@@ -8,8 +8,10 @@ struct AppConfig {
     std::string functionType;
     std::string solver;
     std::vector<double> constants;
-    double tol = 1e-5;
+    double tol = 1e-12;
+    double step = 1e-5;   // step for the numerical derivative
 };
 
-// Function declaration
-bool parseArguments(int argc, char** argv, AppConfig& config);
+// Function declarations
+bool parseArguments(int argc, char** argv, AppConfig& config, std::string& error);
+bool validateConfig(const AppConfig& config, std::string& error);

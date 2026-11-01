@@ -2,11 +2,17 @@
 #include "config.h"
 #include <optional>
 
-double evaluateFunction(double x, const AppConfig& config, bool computeDerivative = false);
+// converged is false when the solver gave up (bad bracket, zero derivative, iteration limit)
+struct SolverResult {
+    double root;
+    int iterations;
+    bool converged;
+};
 
-double runBisection(const AppConfig& config);
-double runNewton(const AppConfig& config, char derivMode);
-double runFalsePosition(const AppConfig& config);
+SolverResult runBisection(const AppConfig& config);
+SolverResult runNewton(const AppConfig& config, char derivMode);
+SolverResult runFalsePosition(const AppConfig& config);
+SolverResult runBracketNewton(const AppConfig& config, char derivMode);
 
 // Derivative modes: none, analytic (from evaluateFunction), numeric (finite difference)
 const char DERIV_NONE     = '0';
@@ -24,5 +30,5 @@ EvalResult runHorner(double x, const AppConfig& config, bool computeDerivative =
 // derivative is only filled in when derivMode == DERIV_ANALYTIC
 EvalResult evaluateFunction(double x, const AppConfig& config, char derivMode = DERIV_NONE);
 
-// Central-difference estimate of f'(x). h <= 0 uses the default step 1e-5.
+// Central-difference estimate of f'(x). h <= 0 uses config.step.
 double numericalDerivative(double x, const AppConfig& config, double h = 0.0);
