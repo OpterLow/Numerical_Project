@@ -1,7 +1,7 @@
 #include <stdexcept>
 #include <vector>
-#include "config.h"
-#include "algorithms.h"
+#include "../config.h"
+#include "../algorithms.h"
 
 using namespace std;
 

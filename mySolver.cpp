@@ -19,13 +19,10 @@ int main(int argc, char** argv) {
         return 1;
     }
 
-<<<<<<< HEAD
-    // Route to the requested algorithm
-    if (config.functionType == "bisection") {
-=======
+
     // 2. Route to the requested algorithm
     if (config.solver == "bisection") {
->>>>>>> feature/kennym
+
         double root = runBisection(config);
         cout << "Bisection Root: " << root << endl;
     } 

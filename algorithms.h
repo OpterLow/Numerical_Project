@@ -2,7 +2,8 @@
 #include "config.h"
 #include <utility>
 
-// Declaration of the bisection solver function
+double evaluateFunction(double x, const AppConfig& config, bool computeDerivative = false);
+
 double runBisection(const AppConfig& config);
 double runNewton(const AppConfig& config);
 double runFalsePosition(const AppConfig& config);

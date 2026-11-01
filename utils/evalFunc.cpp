@@ -1,7 +1,7 @@
-#include "algorithms.h"
+#include "../algorithms.h"
 #include <cmath>
 #include <iostream>
-#include "config.h"
+#include "../config.h"
 
 double evaluateFunction(double x, const AppConfig& config, bool computeDerivative) {
     if (config.functionType == "polynomial") {
