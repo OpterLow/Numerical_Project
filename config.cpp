@@ -7,10 +7,15 @@ using namespace std;
 bool parseArguments(int argc, char** argv, AppConfig& config) {
     if (argc < 6) return false;
     
+<<<<<<< HEAD
     config.functionType = argv[1];
     config.solver = argv[2];
+=======
+    config.solver = argv[2];
+    config.functionType = argv[1];
+>>>>>>> feature/kennym
 
-    for (int i = 3; i < argc; ++i) {
+    for (int i = 3; i < argc - 2; ++i) {
         config.constants.push_back(stod(argv[i]));
     }
     config.a = stod(argv[argc-2]);
